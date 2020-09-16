@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>music player</title>
+
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/iconfont.css">
+
+  <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+  <script src="less/less.js" type="text/javascript"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/playerlist.js"></script>
+  <script src="js/lyric.js"></script>
+  <script src="js/index.js"></script>
+
+</head>
+
+<body>
+  <div class="player">
+
+    <div class="trackInfo">
+      <div class="albumPic rotate">
+        <div class="mask"></div>
+        <div class="top1"></div>
+        <div class="top2"></div>
+        <div class="cover"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="trackName">
+        <p></p>
+      </div>
+      <div class="artist"></div>
+      <div class="lyrics">
+        <ul class="lyricsList"></ul>
+      </div>
+    </div>
+
+    <div class="library">
+
+      <div class="searchBar">
+        <i class="search iconfont icon-chazhao"></i>
+        <input id="seach-txt" type="text" placeholder="Type to search">
+      </div>
+      <div class="category">
+        <div class="recent">
+          <i class="iconfont icon-gengduo-ver"></i>
+          <i class="iconfont icon-yinfu"></i>
+          <div class="categoryName">Recent</div>
+        </div>
+
+        <div class="dynamic">
+          <i class="iconfont icon-gengduo-ver"></i>
+          <i class="iconfont icon-yinyue"></i>
+          <div class="categoryName">Dynamic</div>
+        </div>
+
+        <div class="gentle">
+          <i class="iconfont icon-gengduo-ver"></i>
+          <i class="iconfont icon-cd"></i>
+          <div class="categoryName">Gentle</div>
+        </div>
+
+      </div>
+      <!-- 5list -->
+      <div class="recentContainer listContainer">
+        <div class="back-btn">
+          <i class="back iconfont icon-arrow-simple"></i>
+        </div>
+        <div class="title">Recent</div>
+        <div class="recentContent songList" data-mcs-theme="minimal-dark">
+        </div>
+      </div>
+
+      <div class="dynamicContainer listContainer">
+        <div class="back-btn">
+          <i class="back iconfont icon-arrow-simple"></i>
+        </div>
+        <div class="title">Dynamic</div>
+        <div class="dynamicContent songList" data-mcs-theme="minimal-dark"></div>
+      </div>
+
+      <div class="gentleContainer listContainer">
+        <div class="back-btn">
+          <i class="back iconfont icon-arrow-simple"></i>
+        </div>
+        <div class="title">Gentle</div>
+        <div class="gentleContent songList" data-mcs-theme="minimal-dark"></div>
+      </div>
+
+      <div class="searchContainer listContainer">
+        <div class="back-btn">
+          <i class="back iconfont icon-arrow-simple"></i>
+        </div>
+        <div class="title">Search Result</div>
+        <div class="searchContent songList" data-mcs-theme="minimal-dark">
+        </div>
+        <div class="loader"></div>
+      </div>
+
+      <div class="discoverContainer listContainer">
+        <div class="title">Discover</div>
+        <div class="discoverContent songList" data-mcs-theme="minimal-dark"></div>
+      </div>
+
+    </div>
+
+    <div class="myListContainer">
+      <div class="title">My List</div>
+      <div class="myListContent songList" data-mcs-theme="minimal-dark"></div>
+    </div>
+
+    <div class="controls">
+      <div class="progress">
+        <div class="time">
+          <div class="current">0:16</div>
+          <div class="total">2:59</div>
+          <div class="triangle"></div>
+        </div>
+
+        <div class="progressBar">
+          <div class="currentBar"></div>
+          <div class="progressBtn"></div>
+        </div>
+      </div>
+
+      <div class="btnsBar">
+        <i class="prev iconfont icon-shangyishou"></i>
+        <i class="play iconfont icon-bofang"></i>
+        <i class="next iconfont icon-xiayishou"></i>
+        <i class="volumn iconfont icon-yinliang"></i>
+        <i class="mode iconfont icon-shunxu"></i>
+        <i class="list iconfont icon-liebiao"></i>
+      </div>
+
+    </div>
+
+
+    <audio id="audio">
+      <source src="">
+    </audio>
+  </div>
+  <div class="bg"></div>
+
+
+  <script type="text/javascript" src="http://localhost:56001/livereload.js">
+  </script>
+</body>
+
+</html>
